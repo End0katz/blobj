@@ -3,7 +3,11 @@ package com.end0katz.blobj;
 import java.util.*;
 
 /**
- * Interface to replresent a sequence of any {link Object}s, normally {@link Integer}s, {@link Double}s or {@link Long}s. They can be any length (including infinite).
+ * Interface to represent a sequence of any {@link Object}s, normally {@link Integer}s,
+ *  {@link Double}s or {@link Long}s. They can be any length (including infinite).
+ * @param <T> the type of the items in this sequence.
+ * 
+ * @see Sequences
  */
 public interface Sequence<T> extends Iterable<T>, Blobject {
 
