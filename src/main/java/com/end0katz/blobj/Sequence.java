@@ -11,7 +11,7 @@ import java.util.*;
  *     the type of the items in this sequence.
  * @see Sequences
  */
-public interface Sequence<T> extends Iterable<T>, Blobject {
+public interface Sequence<T> extends Iterable<T> {
 
     /**
      * Return the nth item in this sequence, 0-indexed.

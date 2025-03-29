@@ -8,7 +8,7 @@ package com.end0katz.blobj;
  * @param <T>
  *     the type of object you are mutating.
  */
-public class Mutable<T> implements Blobject {
+public class Mutable<T> {
 
     /**
      * The value. Note that it is not final.

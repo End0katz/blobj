@@ -1,7 +1,5 @@
 package com.end0katz.blobj.vec;
 
-import com.end0katz.blobj.*;
-
 /**
  * Utility class for vectors of any object. NOT INTENDED FOR USE AS GENERIC
  * OBJECT VECTOR, USE {@code Obj2}
@@ -16,7 +14,7 @@ import com.end0katz.blobj.*;
  * @see Int2
  * @see Obj2
  */
-public interface Vec2<T, V2 extends Vec2<T, V2>> extends Blobject {
+public interface Vec2<T, V2 extends Vec2<T, V2>> {
 
     /**
      * Returns the x component of this vector.
