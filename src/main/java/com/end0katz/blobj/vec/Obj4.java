@@ -1,5 +1,14 @@
 package com.end0katz.blobj.vec;
 
+/**
+ * Vector containing 2 custom {@link Object}s
+ *
+ * @param <T> the type of object in this vector.
+ *
+ * @see Vec4
+ * @see Obj2
+ * @see Obj3
+ */
 public record Obj4<T>(T x, T y, T z, T w) implements Vec4<T, Obj2<T>, Obj3<T>, Obj4<T>> {
 
     @Override

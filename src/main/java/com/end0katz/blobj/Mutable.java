@@ -4,6 +4,8 @@ package com.end0katz.blobj;
  * Class to simulate a mutable variable, like length-1 arrays. Can be final.
  * This is useful for using records and not caring about how records are meant
  * to be non-mutable.
+ *
+ * @param <T> the type of object you are mutating.
  */
 public class Mutable<T> implements Blobject {
 

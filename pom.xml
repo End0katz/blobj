@@ -22,6 +22,7 @@ but when I do get one it will be here:
         <build.defaultGoal>clean package javadoc:javadoc</build.defaultGoal>
     </properties>
 
+    <!--
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -33,11 +34,13 @@ but when I do get one it will be here:
             </dependency>
         </dependencies>
     </dependencyManagement>
+    -->
 
     <dependencies>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
+            <version>5.12.1</version>
             <scope>test</scope>
         </dependency>
     </dependencies>

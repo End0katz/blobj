@@ -1,5 +1,12 @@
 package com.end0katz.blobj.vec;
 
+/**
+ * Vector containing 3 {@link Double}s
+ *
+ * @see Vec3
+ * @see Float2
+ * @see Float4
+ */
 public record Float3(Double x, Double y, Double z) implements Vec3<Double, Float2, Float3> {
 
     @Override

@@ -6,7 +6,9 @@ package com.end0katz.blobj;
 public interface Blobject {
 
     /**
-     * Base class for all builder objects for blobjects
+     * Base class for all builder objects for blobjects.
+     *
+     * @param <T> the class this is a builder for.
      */
     public static interface Builder<T extends Blobject> {
 

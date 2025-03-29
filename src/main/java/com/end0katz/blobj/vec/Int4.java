@@ -1,5 +1,12 @@
 package com.end0katz.blobj.vec;
 
+/**
+ * Vector containing 4 {@link Integer}s
+ *
+ * @see Vec4
+ * @see Int2
+ * @see Int3
+ */
 public record Int4(Integer x, Integer y, Integer z, Integer w) implements Vec4<Integer, Int2, Int3, Int4> {
 
     @Override
