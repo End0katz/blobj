@@ -4,19 +4,23 @@ package com.end0katz.blobj.vec;
  * Utility class for vectors of any object. NOT INTENDED FOR USE AS GENERIC
  * OBJECT VECTOR, USE {@code Obj3}
  *
- * @param <T> - the object this a vector of
- * @param <V2> - the object to return for vec2-returning methods
- * @param <V3> - the object to return for vec3-returning methods
- * @param <V4> - the object to return for this-returning methods
+ * @param <T>
+ *     - the object this a vector of
+ * @param <V2>
+ *     - the object to return for vec2-returning methods
+ * @param <V3>
+ *     - the object to return for vec3-returning methods
+ * @param <V4>
+ *     - the object to return for this-returning methods
  * @see Vec2
  * @see Vec3
- *
  * @see Float4
  * @see Int4
  * @see Obj4
  */
 public interface Vec4<T, V2 extends Vec2<T, V2>, V3 extends Vec3<T, V2, V3>, V4 extends Vec4<T, V2, V3, V4>>
-        extends Vec3<T, V2, V3> {
+    extends Vec3<T, V2, V3>
+{
 
     /**
      * Returns the w component of this vector.
@@ -29,10 +33,14 @@ public interface Vec4<T, V2 extends Vec2<T, V2>, V3 extends Vec3<T, V2, V3>, V4 
      * this is an internal method. override in Vec4 subclasses, but DO NOT CALL
      * YOURSELF.
      *
-     * @param x the x component.
-     * @param y the y component.
-     * @param z the z component.
-     * @param w the w component.
+     * @param x
+     *     the x component.
+     * @param y
+     *     the y component.
+     * @param z
+     *     the z component.
+     * @param w
+     *     the w component.
      * @return {@code new <thisType>(x, y, z, w);}
      */
     public V4 _createNew(T x, T y, T z, T w);
@@ -472,6 +480,6 @@ public interface Vec4<T, V2 extends Vec2<T, V2>, V3 extends Vec3<T, V2, V3>, V4 
     @SuppressWarnings("unchecked")
     @Override
     public default T[] asArray() {
-        return (T[]) new Object[]{x(), y(), z(), w()};
+        return (T[]) new Object[] {x(), y(), z(), w()};
     }
 }

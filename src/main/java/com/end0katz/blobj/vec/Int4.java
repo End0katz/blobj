@@ -3,10 +3,14 @@ package com.end0katz.blobj.vec;
 /**
  * Vector containing 4 {@link Integer}s
  *
- * @param x the x component of this vector
- * @param y the y component of this vector
- * @param z the z component of this vector
- * @param w the w component of this vector
+ * @param x
+ *     the x component of this vector
+ * @param y
+ *     the y component of this vector
+ * @param z
+ *     the z component of this vector
+ * @param w
+ *     the w component of this vector
  * @see Vec4
  * @see Int2
  * @see Int3
@@ -45,6 +49,7 @@ public record Int4(Integer x, Integer y, Integer z, Integer w) implements Vec4<I
      * Calculate and return the taxicab magnitude of this vector.
      *
      * @return the calculated magnitude.
+     *
      * @see <a href="https://en.wikipedia.org/wiki/Taxicab_geometry">The
      * wikipedia article on taxicab distance/magnitude</a>
      */

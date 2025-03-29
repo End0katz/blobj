@@ -9,5 +9,4 @@ import java.lang.annotation.*;
  * &commat;Unstable should be avoided out of snapshot builds.
  */
 @Documented
-public @interface Unstable {
-}
+public @interface Unstable { }

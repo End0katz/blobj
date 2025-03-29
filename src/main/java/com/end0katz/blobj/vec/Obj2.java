@@ -3,10 +3,12 @@ package com.end0katz.blobj.vec;
 /**
  * Vector containing 2 custom {@link Object}s
  *
- * @param x the x component of this vector
- * @param y the y component of this vector
- * @param <T> the type of object in this vector.
- *
+ * @param x
+ *     the x component of this vector
+ * @param y
+ *     the y component of this vector
+ * @param <T>
+ *     the type of object in this vector.
  * @see Vec2
  * @see Obj3
  * @see Obj4

@@ -3,9 +3,10 @@ package com.end0katz.blobj.vec;
 /**
  * Vector containing 2 {@link Double}s
  *
- * @param x the x component of this vector
- * @param y the y component of this vector
- *
+ * @param x
+ *     the x component of this vector
+ * @param y
+ *     the y component of this vector
  * @see Vec2
  * @see Float3
  * @see Float4
@@ -34,6 +35,7 @@ public record Float2(Double x, Double y) implements Vec2<Double, Float2> {
      * Calculate and return the taxicab magnitude of this vector.
      *
      * @return the calculated magnitude.
+     *
      * @see <a href="https://en.wikipedia.org/wiki/Taxicab_geometry">The
      * wikipedia article on taxicab distance/magnitude</a>
      */
