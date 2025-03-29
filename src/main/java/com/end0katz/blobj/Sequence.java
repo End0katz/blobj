@@ -3,10 +3,12 @@ package com.end0katz.blobj;
 import java.util.*;
 
 /**
- * Interface to represent a sequence of any {@link Object}s, normally {@link Integer}s,
- *  {@link Double}s or {@link Long}s. They can be any length (including infinite).
+ * Interface to represent a sequence of any {@link Object}s, normally
+ * {@link Integer}s, {@link Double}s or {@link Long}s. They can be any length
+ * (including infinite).
+ *
  * @param <T> the type of the items in this sequence.
- * 
+ *
  * @see Sequences
  */
 public interface Sequence<T> extends Iterable<T>, Blobject {
@@ -18,13 +20,11 @@ public interface Sequence<T> extends Iterable<T>, Blobject {
      * sequences handle it differently than others), so be prepared for
      * {@link IllegalArgumentException}s.
      *
-     * @param n
-     *     the index of the item to return.
+     * @param n the index of the item to return.
      * @return item #n.
      *
-     * @throws IllegalArgumentException
-     *     if {@code n} is less than 0, and this
-     *     sequence does not support negative indices.
+     * @throws IllegalArgumentException if {@code n} is less than 0, and this
+     * sequence does not support negative indices.
      * @see Sequence#indexOf(Object)
      */
     T get(long n);
@@ -32,8 +32,7 @@ public interface Sequence<T> extends Iterable<T>, Blobject {
     /**
      * Query the next item in the sequence, after {@code item}.
      *
-     * @param item
-     *     the item before the result.
+     * @param item the item before the result.
      * @return the next item, or null if {@code item} is not in the sequence.
      *
      * @see Sequence#indexOf(Object)
@@ -44,8 +43,7 @@ public interface Sequence<T> extends Iterable<T>, Blobject {
     /**
      * Return the index of {@code item}, or null if it is not in the sequence.
      *
-     * @param item
-     *     the item you wish to query the index of.
+     * @param item the item you wish to query the index of.
      * @return the index of {@code item}, or null if it is not in the sequence.
      *
      * @see Sequence#contains(Object)
@@ -55,8 +53,7 @@ public interface Sequence<T> extends Iterable<T>, Blobject {
     /**
      * Return if the sequence contains an item.
      *
-     * @param item
-     *     the item you would lke to query.
+     * @param item the item you would lke to query.
      * @return if {@code item} is in the sequence.
      *
      * @see Sequence#contains
@@ -66,8 +63,7 @@ public interface Sequence<T> extends Iterable<T>, Blobject {
     /**
      * Bulk-contains-checking.
      *
-     * @param items
-     *     the list of inputs.
+     * @param items the list of inputs.
      * @return a {@code boolean[]} of same length as {@code items}, with each
      * item corresponding to {@code this.contains(x)} for the appropriate item.
      *
@@ -118,7 +114,9 @@ public interface Sequence<T> extends Iterable<T>, Blobject {
     }
 
     /**
-     * An enum containing special sequences, with no configuration, as instances, and configurable sequences as static member classes.
+     * An enum containing special sequences, with no configuration, as
+     * instances, and configurable sequences as static member classes.
+     *
      * @see Sequences#ALL_INTS
      * @see Sequences.Fibonacci
      */
@@ -164,19 +162,19 @@ public interface Sequence<T> extends Iterable<T>, Blobject {
              *
              * @see Fibonacci#b
              */
-            int             a;
+            int a;
             /**
              * The second base.
              *
              * @see Fibonacci#a
              */
-            int             b;
+            int b;
             /**
              * The first cache.
              *
              * @see Fibonacci#indexCache
              */
-            Map<Long, Long> cache      = new HashMap<>();
+            Map<Long, Long> cache = new HashMap<>();
             /**
              * The second cache.
              *
@@ -187,10 +185,8 @@ public interface Sequence<T> extends Iterable<T>, Blobject {
             /**
              * Construct a custom fibonacci sequence.
              *
-             * @param a
-             *     the first base.
-             * @param b
-             *     the second base.
+             * @param a the first base.
+             * @param b the second base.
              * @see Fibonacci#Fibonacci()
              */
             public Fibonacci(int a, int b) {
@@ -210,12 +206,10 @@ public interface Sequence<T> extends Iterable<T>, Blobject {
             /**
              * Internal method to get fibo without caching.
              *
-             * @param n
-             *     the index to query
+             * @param n the index to query
              * @return the nth term, without caching.
              *
-             * @throws IllegalArgumentException
-             *     if n &lt; 0
+             * @throws IllegalArgumentException if n &lt; 0
              */
             private Long _get(long n) {
                 if (n < 0) {
