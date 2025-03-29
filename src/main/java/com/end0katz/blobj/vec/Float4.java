@@ -3,6 +3,10 @@ package com.end0katz.blobj.vec;
 /**
  * Vector containing 4 {@link Double}s
  *
+ * @param x the x component of this vector
+ * @param y the y component of this vector
+ * @param z the z component of this vector
+ * @param w the w component of this vector
  * @see Vec4
  * @see Float2
  * @see Float3

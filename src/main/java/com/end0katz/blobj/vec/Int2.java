@@ -3,6 +3,8 @@ package com.end0katz.blobj.vec;
 /**
  * Vector containing 2 {@link Integer}s
  *
+ * @param x the x component of this vector
+ * @param y the y component of this vector
  * @see Vec2
  * @see Int3
  * @see Int4
