@@ -2,6 +2,9 @@ package com.end0katz.blobj;
 
 import java.util.*;
 
+/**
+ * Interface to replresent a sequence of any {link Object}s, normally {@link Integer}s, {@link Double}s or {@link Long}s. They can be any length (including infinite).
+ */
 public interface Sequence<T> extends Iterable<T>, Blobject {
 
     /**
@@ -110,6 +113,11 @@ public interface Sequence<T> extends Iterable<T>, Blobject {
         };
     }
 
+    /**
+     * An enum containing special sequences, with no configuration, as instances, and configurable sequences as static member classes.
+     * @see Sequences#ALL_INTS
+     * @see Sequences.Fibonacci
+     */
     public static enum Sequences implements Sequence<Long> {
 
         /**
