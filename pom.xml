@@ -5,12 +5,12 @@
 
     <groupId>com.end0katz.blobj</groupId>
     <artifactId>blobj</artifactId>
-    <version>v1.0.0-SNAPSHOT-0</version>
+    <version>v1.0.0-SNAPSHOT-1</version>
 
     <name>Blobj</name>
     
     <!--
-I dont have a website :(
+I don't have a website :(
 but when I do get one it will be here:
 
 <url>http://projects.end0katz.com/blobj</url>
