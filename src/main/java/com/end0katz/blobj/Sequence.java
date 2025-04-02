@@ -121,7 +121,7 @@ public interface Sequence<T> extends Iterable<T> {
 
     /**
      * An enum containing special sequences, with no configuration, as
-     * instances, and configurable sequences as static member classes.
+     * instances, and configurable sequences as static nested classes.
      *
      * @see Sequences#ALL_INTS
      * @see Sequences.Fibonacci
