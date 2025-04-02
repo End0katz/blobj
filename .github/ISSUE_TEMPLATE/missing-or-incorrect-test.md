@@ -2,7 +2,7 @@
 name: Missing or incorrect test
 about: Notify me that I have done a test incorrectly or forgot to test a feature
 title: "[feature] not adequately tested"
-labels: ''
+labels: bug, enhancement
 assignees: ''
 
 ---
