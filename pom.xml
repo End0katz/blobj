@@ -100,18 +100,22 @@ but when I do get one it will be here:
                 <configuration>
                     <show>private</show>
                     <tags>
+                        <!--
+                        ! Can someone please suggest how to make maven use a version of
+                        ! javadoc that will include these tags?!?!?!?
+                        -->
                         <tag>
-                            <name>apiNote</name>
+                            <name>future.apiNote</name>
                             <placement>a</placement>
                             <head>API Note:</head>
                         </tag>
                         <tag>
-                            <name>implSpec</name>
+                            <name>future.implSpec</name>
                             <placement>a</placement>
                             <head>Implementation Requirements:</head>
                         </tag>
                         <tag>
-                            <name>implNote</name>
+                            <name>future.implNote</name>
                             <placement>a</placement>
                             <head>Implementation Note:</head>
                         </tag>
