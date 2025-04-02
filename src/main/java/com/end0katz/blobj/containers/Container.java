@@ -1,5 +1,7 @@
 package com.end0katz.blobj.containers;
 
+import com.end0katz.blobj.containers.generic.*;
+
 /**
  * Base class for all containers.
  *
