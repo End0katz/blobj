@@ -2,7 +2,7 @@
 name: Security issue
 about: Notify me of a security issue
 title: ''
-labels: ''
+labels: security
 assignees: ''
 
 ---

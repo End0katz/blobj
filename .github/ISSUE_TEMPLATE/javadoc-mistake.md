@@ -2,7 +2,7 @@
 name: Javadoc Mistake
 about: State a problem/inconsistency with javadoc or general project style
 title: ''
-labels: ''
+labels: documentation, enhancement
 assignees: ''
 
 ---
