@@ -1,0 +1,16 @@
+# Bundles
+
+The projects found in this folder contain no source code; they merely requires libraries as dependencies.
+
+## Implemented
+
+## Planned
+
+* Conf
+  * SnakeYAML
+  * Google JSON
+  * mwanji/toml4j
+  * Jsoup
+* App
+  * Argparse
+  * conf
