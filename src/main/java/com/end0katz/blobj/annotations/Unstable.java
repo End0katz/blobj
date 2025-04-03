@@ -17,4 +17,6 @@ import java.lang.annotation.*;
  * it should give a warning.
  */
 @Documented
-public @interface Unstable { }
+@Retention(RetentionPolicy.RUNTIME)
+public @interface Unstable {
+}
