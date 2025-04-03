@@ -13,6 +13,8 @@ import java.lang.annotation.*;
  *
  *      public String yeet(Foo bar) {return "In this world, it's yeet or be yote";} }
  * }
+ *
+ * @see Group
  */
 @Documented
 @Retention(RetentionPolicy.RUNTIME)

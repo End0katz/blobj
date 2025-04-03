@@ -14,6 +14,8 @@ import java.lang.annotation.*;
  *
  *      public static String yeet(Foo bar) {return "In this world, it's yeet or be yote";}
  * } }
+ *
+ * @see Singleton
  */
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
