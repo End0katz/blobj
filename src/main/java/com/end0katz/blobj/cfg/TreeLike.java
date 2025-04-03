@@ -63,15 +63,6 @@ public interface TreeLike {
     }
 
     /**
-     * A parser for XML into a TreeLike.
-     */
-    @Placeholder
-    public static final Parser<TreeLike> XML = (String s) -> {
-        Document d = Jsoup.parse(s, org.jsoup.parser.Parser.xmlParser());
-        return null;
-    };
-
-    /**
      * A parser for YAML into a TreeLike.
      */
     @Placeholder
