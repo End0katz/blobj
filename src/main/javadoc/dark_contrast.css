@@ -1,6 +1,11 @@
 /* This took ages to make :) */
 
 :root {
+    --body-font-family: "Ubuntu Mono";
+    --block-font-family: "Ubuntu Mono";
+    --code-font-family: "Ubuntu Mono";
+
+
     --even-row-color: #100000;
     --odd-row-color: #040010;
 
