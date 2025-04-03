@@ -8,13 +8,9 @@
     <version>v1.0.0-SNAPSHOT-1</version>
 
     <name>Blobj</name>
-    
-    <!--
-I don't have a website :(
-but when I do get one it will be here:
-
-<url>http://projects.end0katz.com/blobj</url>
-    -->
+    <description>A General-Purpose Java Library. I would say generic, but there are no type parameters</description>
+    <inceptionYear>2025</inceptionYear>
+    <url>https://github.com/End0katz/blobj</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
