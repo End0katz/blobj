@@ -106,16 +106,6 @@
                         <addStylesheet>dark_contrast.css</addStylesheet>
                     </addStylesheets>
                     <tags>
-                        <tag>
-                            <name>feature</name>
-                            <placement>a</placement>
-                            <head>Implemented Features:</head>
-                        </tag>
-                        <tag>
-                            <name>plannedFeature</name>
-                            <placement>a</placement>
-                            <head>Planned Features:</head>
-                        </tag>
                         <!--
                         ! Can someone please suggest how to make maven use a version of
                         ! javadoc that will include these tags?!?!?!?
