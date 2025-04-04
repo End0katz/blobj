@@ -80,49 +80,6 @@
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-javadoc-plugin</artifactId>
-                <version>3.11.2</version>
-                <configuration>
-                    <show>private</show>
-                    <addStylesheets>
-                        <addStylesheet>/../src/main/javadoc/dark_contrast.css</addStylesheet>
-                    </addStylesheets>
-                    <tags>
-                        <tag>
-                            <name>feature</name>
-                            <placement>a</placement>
-                            <head>Implemented Features:</head>
-                        </tag>
-                        <tag>
-                            <name>plannedFeature</name>
-                            <placement>a</placement>
-                            <head>Planned Features:</head>
-                        </tag>
-                        <!--
-                        ! Can someone please suggest how to make maven use a version of
-                        ! javadoc that will include these tags?!?!?!?
-                        -->
-                        <tag>
-                            <name>future.apiNote</name>
-                            <placement>a</placement>
-                            <head>API Note:</head>
-                        </tag>
-                        <tag>
-                            <name>future.implSpec</name>
-                            <placement>a</placement>
-                            <head>Implementation Requirements:</head>
-                        </tag>
-                        <tag>
-                            <name>future.implNote</name>
-                            <placement>a</placement>
-                            <head>Implementation Note:</head>
-                        </tag>
-                    </tags>
-                </configuration>
-            </plugin>
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
                 <version>3.6.0</version>
                 <executions>
