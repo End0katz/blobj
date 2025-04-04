@@ -11,7 +11,10 @@ The projects found in this folder contain no source code; they merely requires l
   * Jsoup
 * App
   * Argparse4j
-  * conf
+  * bundle-conf
+* Terminal App
+  * Lanterna
+  * bundle-app
 
 ## Planned
 

@@ -19,6 +19,7 @@
     <modules>
         <module>conf</module>
         <module>app</module>
+        <module>term-app</module>
     </modules>
 
 

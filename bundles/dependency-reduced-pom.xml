@@ -49,43 +49,6 @@
     </pluginManagement>
     <plugins>
       <plugin>
-        <artifactId>maven-javadoc-plugin</artifactId>
-        <version>3.11.2</version>
-        <configuration>
-          <show>private</show>
-          <addStylesheets>
-            <addStylesheet>/../src/main/javadoc/dark_contrast.css</addStylesheet>
-          </addStylesheets>
-          <tags>
-            <tag>
-              <name>feature</name>
-              <placement>a</placement>
-              <head>Implemented Features:</head>
-            </tag>
-            <tag>
-              <name>plannedFeature</name>
-              <placement>a</placement>
-              <head>Planned Features:</head>
-            </tag>
-            <tag>
-              <name>future.apiNote</name>
-              <placement>a</placement>
-              <head>API Note:</head>
-            </tag>
-            <tag>
-              <name>future.implSpec</name>
-              <placement>a</placement>
-              <head>Implementation Requirements:</head>
-            </tag>
-            <tag>
-              <name>future.implNote</name>
-              <placement>a</placement>
-              <head>Implementation Note:</head>
-            </tag>
-          </tags>
-        </configuration>
-      </plugin>
-      <plugin>
         <artifactId>maven-shade-plugin</artifactId>
         <version>3.6.0</version>
         <executions>
@@ -102,6 +65,7 @@
   <modules>
     <module>conf</module>
     <module>app</module>
+    <module>term-app</module>
   </modules>
   <properties>
     <maven.compiler.release>23</maven.compiler.release>
