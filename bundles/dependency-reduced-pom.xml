@@ -101,6 +101,7 @@
   </build>
   <modules>
     <module>conf</module>
+    <module>app</module>
   </modules>
   <properties>
     <maven.compiler.release>23</maven.compiler.release>

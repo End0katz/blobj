@@ -9,9 +9,8 @@ The projects found in this folder contain no source code; they merely requires l
   * Google JSON
   * mwanji/toml4j
   * Jsoup
-
-## Planned
-
 * App
   * Argparse
   * conf
+
+## Planned
