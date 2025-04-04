@@ -14,3 +14,5 @@ The projects found in this folder contain no source code; they merely requires l
   * conf
 
 ## Planned
+
+If you have any suggestions, create an issue request labeled "Enhancement"
