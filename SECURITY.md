@@ -12,4 +12,4 @@ currently being supported with security updates.
 ## Reporting a Vulnerability
 
 Create an issue, using the security issue template.
-If possible, create a pull request with a potential fix, and link to it ("https&colon;//github&period;com/...") in the issue
+If possible, create a pull request with a potential fix, and link to it ("[https://github.com/...](https://github.com/end0katz/blobj)") in the issue
