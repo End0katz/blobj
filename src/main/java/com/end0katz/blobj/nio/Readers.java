@@ -58,7 +58,11 @@ public enum Readers {
         @Override
         public int read(char[] cbuf, int off, int len) throws IOException {
             for (int i = off; i < len; i++) {
+                int chr = -1;
                 if (rd.ready()) {
+                    chr = rd.read();
+                }
+                if (rd.ready() && !(chr == -1)) {
                     cbuf[i] = (char) rd.read();
                     data += cbuf[i];
                 } else {

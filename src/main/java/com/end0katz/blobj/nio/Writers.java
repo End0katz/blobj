@@ -17,65 +17,6 @@ public enum Writers {
     ;
 
     /**
-     * Writer subclass that simply discards any information given to it.
-     * Closing, Flushing, And Writing all just simply do nothing. (As in, they
-     * have empty function bodies)
-     *
-     * This class does not throw IOExceptions
-     */
-    public static class Voider extends Writer {
-
-        /**
-         * Construct a voider.
-         */
-        public Voider() {
-        }
-
-        @Override
-        public void write(char[] cbuf, int off, int len) {
-        }
-
-        @Override
-        public void flush() {
-        }
-
-        @Override
-        public void close() {
-        }
-
-        @Override
-        public Voider append(char c) {
-            return this;
-        }
-
-        @Override
-        public Voider append(CharSequence cs) {
-            return this;
-        }
-
-        @Override
-        public Voider append(CharSequence cs, int start, int end) {
-            return this;
-        }
-
-        @Override
-        public void write(char[] cbuf) {
-        }
-
-        @Override
-        public void write(int c) {
-        }
-
-        @Override
-        public void write(String s) {
-        }
-
-        @Override
-        public void write(String s, int off, int len) {
-        }
-    }
-
-    /**
      * Writer subclass that adds all writes to an internal string accesable
      * through {@code data()}
      *
