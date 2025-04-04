@@ -8,8 +8,9 @@ import java.io.*;
  * A collection of various writers for various purposes
  *
  * <ul>
- * <li>{@link Voider} discards any data given to it</li>
  * <li>{@link StringWriter} writes to an internal readable String</li>
+ * <li>{@link Delimited} passes outputs, followed by deliming string, to
+ * writer.</li>
  * </ul>
  */
 @Group
@@ -85,7 +86,7 @@ public enum Writers {
 
         @Override
         public void write(int c) {
-            str.append(c);
+            str.append((char) c);
         }
 
         @Override

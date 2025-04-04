@@ -63,7 +63,7 @@ public enum Readers {
                     chr = rd.read();
                 }
                 if (rd.ready() && !(chr == -1)) {
-                    cbuf[i] = (char) rd.read();
+                    cbuf[i] = (char) chr;
                     data += cbuf[i];
                 } else {
                     cbuf[i] = data.charAt(index++);

@@ -19,8 +19,9 @@ public class TestWriters {
             writer.write("cbuf2;".toCharArray(), 1, 5);
             writer.write("str;");
             writer.write("String2;err", 0, 8);
+            writer.write(0x20);
 
-            assertEquals("Initial Text;characters;cbuf;buf2;str;String2;", writer.data());
+            assertEquals("Initial Text;characters;cbuf;buf2;str;String2; ", writer.data());
         }
     }
 
