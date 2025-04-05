@@ -1,0 +1,52 @@
+/* This took ages to make :) */
+
+:root {
+    --body-font-family: "Ubuntu Mono";
+    --block-font-family: "Ubuntu Mono";
+    --code-font-family: "Ubuntu Mono";
+
+
+    --even-row-color: #100000;
+    --odd-row-color: #040010;
+
+    --body-background-color: #000000;
+    --section-background-color: #000000;
+    --detail-background-color: #000000;
+
+    --navbar-background-color: #000000;
+    --subnav-background-color: #303030;
+    --selected-background-color: #ffa000;
+
+
+    --body-text-color: #ffffff;
+    --block-text-color: #ffffff;
+    --navbar-text-color: #ffffff;
+    --title-color: #ffffff;
+
+    --selected-text-color: #000000;
+
+    --link-color: #00ffffff;
+    --selected-link-color: #ff00ff;
+    --link-color-active: #ffff00;
+
+
+    --snippet-background-color: #353535;
+    --snippet-text-color: #00aeff;
+    --snippet-highlight-color: #ffffff;
+
+    --border-color: #00ffff;
+    --table-border-color: #ffffff;
+
+    --search-input-background-color: #000000;
+    --search-input-text-color: #ffffff;
+    --search-input-placeholder-color: #909090;
+
+    --search-tag-highlight-color: #ff00ff;
+
+    --copy-icon-brightness: 500%;
+    --copy-button-background-color-active: #000000;
+
+    --invalid-tag-background-color: #500000;
+    --invalid-tag-text-color: #a000fa;
+
+}

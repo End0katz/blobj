@@ -1,0 +1,10 @@
+com.end0katz.blobj
+com.end0katz.blobj.annotations
+com.end0katz.blobj.annotations.meta
+com.end0katz.blobj.containers
+com.end0katz.blobj.containers.generic
+com.end0katz.blobj.event
+com.end0katz.blobj.misc
+com.end0katz.blobj.nio
+com.end0katz.blobj.suppliers
+com.end0katz.blobj.vec
