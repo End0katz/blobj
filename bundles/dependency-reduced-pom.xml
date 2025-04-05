@@ -70,6 +70,6 @@
   <properties>
     <maven.compiler.release>23</maven.compiler.release>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <build.defaultGoal>clean package javadoc:javadoc</build.defaultGoal>
+    <build.defaultGoal>clean package</build.defaultGoal>
   </properties>
 </project>
