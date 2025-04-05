@@ -8,6 +8,12 @@ import java.util.*;
 public class ChainEncryptor implements Encryptor {
 
     /**
+     * Construct a chain encryptor with no encryptors attached.
+     */
+    public ChainEncryptor() {
+    }
+
+    /**
      * The list of encryptors.
      */
     List<Encryptor> chain = new ArrayList<>();
@@ -25,7 +31,7 @@ public class ChainEncryptor implements Encryptor {
     /**
      * Add {@link Encryptor}s to the chain.
      *
-     * @param e the {@link Collection} of encryptors to add.
+     * @param es the {@link Collection} of encryptors to add.
      * @return {@code this}
      */
     public ChainEncryptor add(Collection<Encryptor> es) {
