@@ -17,17 +17,47 @@ public class CaesarCipher implements Encryptor {
      */
     CaesarCipherMethod method;
 
+    /**
+     * Construct a Caesar Cipher that shifts a certain amount with a certain
+     * method.
+     *
+     * @param amount the amount to shift. use negative values to shift
+     * backwards.
+     * @param method the {@link CaesarCipherMethod} explaining how to shift.
+     */
     public CaesarCipher(int amount, CaesarCipherMethod method) {
         this.amount = amount;
         this.method = method;
     }
 
+    /**
+     * Method to explain which characters to shift and to what
+     */
     public static enum CaesarCipherMethod {
+        /**
+         * Shift A-Z to other A-Z and vice-versa for lowercase.
+         */
         ALPHABETIC_ONLY,
+        /**
+         * Shift using pattern: 0-9A-Za-z.
+         */
         ALPHANUMERIC_ONLY,
+        /**
+         * Shift ascii characters.
+         */
         ASCII_ONLY,
+        /**
+         * Shift to other characters in same unicode block.
+         */
         IN_BLOCK_ONLY,
+        /**
+         * Shift to any other existing unicode character.
+         */
         UNICODE_EXISTS,
+        /**
+         * Shift to other unicode characters, regardless of if they exist or
+         * not.
+         */
         UNRESTRICTED_UNICODE;
     }
 
@@ -38,11 +68,15 @@ public class CaesarCipher implements Encryptor {
             switch (method) {
                 case ALPHABETIC_ONLY -> {
                     if (Character.toString(c).matches("[A-Za-z]")) {
+                        String chrs;
                         if (Character.isUpperCase(c)) {
-                            result.append((char) (((c - 'A' + amount) % 26) + 'A'));
+                            chrs = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
                         } else {
-                            result.append((char) (((c - 'a' + amount) % 26) + 'a'));
+                            chrs = "abcdefghijklmnopqrstuvwxyz";
                         }
+                        result.append(chrs.charAt(
+                                Math.floorMod(chrs.indexOf(c) + amount, 26))
+                        );
                     } else {
                         result.append(c);
                     }
@@ -50,7 +84,7 @@ public class CaesarCipher implements Encryptor {
 
                 case ASCII_ONLY -> {
                     if (c < 128) {
-                        result.append((char) ((c + amount) % 128));
+                        result.append((char) Math.floorMod((c + amount), 128));
                     } else {
                         result.append(c);
                     }
@@ -58,8 +92,8 @@ public class CaesarCipher implements Encryptor {
 
                 case ALPHANUMERIC_ONLY -> {
                     if (Character.toString(c).matches("[A-Za-z0-9]")) {
-                        String chrs = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-                        result.append(chrs.codePointAt((chrs.indexOf(c) + amount) % chrs.length()));
+                        String chrs = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+                        result.append(chrs.charAt(Math.floorMod((chrs.indexOf(c) + amount), chrs.length())));
                     } else {
                         result.append(c);
                     }
@@ -67,7 +101,7 @@ public class CaesarCipher implements Encryptor {
 
                 case IN_BLOCK_ONLY -> {
                     String chrs = StringConsts.codePointsOfBlock(Character.UnicodeBlock.of(c));
-                    result.append(chrs.codePointAt((chrs.indexOf(c) + amount) % chrs.length()));
+                    result.append(chrs.charAt(Math.floorMod((chrs.indexOf(c) + amount), chrs.length())));
                 }
                 case UNICODE_EXISTS -> {
                     if (Character.isDefined(c)) {
@@ -75,7 +109,7 @@ public class CaesarCipher implements Encryptor {
                         for (int i = 0; i < amount; i++) {
                             do {
                                 ch++;
-                                ch %= StringConsts.codePoints;
+                                ch = Math.floorMod(ch, StringConsts.codePoints);
                             } while (Character.isDefined(ch));
                         }
                         result.append((char) ch);
@@ -87,7 +121,7 @@ public class CaesarCipher implements Encryptor {
                 case UNRESTRICTED_UNICODE -> {
                     int ch = c;
                     ch += amount;
-                    ch %= StringConsts.codePoints;
+                    ch = Math.floorMod(ch, StringConsts.codePoints);
                     result.append((char) ch);
                 }
 
