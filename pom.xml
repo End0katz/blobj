@@ -113,6 +113,7 @@
                     <addStylesheets>
                         <addStylesheet>dark_contrast.css</addStylesheet>
                     </addStylesheets>
+                    <outputDirectory>${project.basedir}/gh-pages</outputDirectory>
                     <tags>
                         <!--
                         ! Can someone please suggest how to make maven use a version of
