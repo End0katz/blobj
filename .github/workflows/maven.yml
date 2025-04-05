@@ -14,6 +14,10 @@ on:
   pull_request:
     branches: ["main", "v1.0.0-SNAPSHOTs"]
 
+permissions:
+  contents: read
+  pull-requests: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
