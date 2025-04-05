@@ -43,12 +43,16 @@ public class CaesarCipher implements Encryptor {
                         } else {
                             result.append((char) (((c - 'a' + amount) % 26) + 'a'));
                         }
+                    } else {
+                        result.append(c);
                     }
                 }
 
                 case ASCII_ONLY -> {
                     if (c < 128) {
                         result.append((char) ((c + amount) % 128));
+                    } else {
+                        result.append(c);
                     }
                 }
 
@@ -56,6 +60,8 @@ public class CaesarCipher implements Encryptor {
                     if (Character.toString(c).matches("[A-Za-z0-9]")) {
                         String chrs = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
                         result.append(chrs.codePointAt((chrs.indexOf(c) + amount) % chrs.length()));
+                    } else {
+                        result.append(c);
                     }
                 }
 
@@ -64,14 +70,18 @@ public class CaesarCipher implements Encryptor {
                     result.append(chrs.codePointAt((chrs.indexOf(c) + amount) % chrs.length()));
                 }
                 case UNICODE_EXISTS -> {
-                    int ch = c;
-                    for (int i = 0; i < amount; i++) {
-                        do {
-                            ch++;
-                            ch %= StringConsts.codePoints;
-                        } while (Character.isDefined(ch));
+                    if (Character.isDefined(c)) {
+                        int ch = c;
+                        for (int i = 0; i < amount; i++) {
+                            do {
+                                ch++;
+                                ch %= StringConsts.codePoints;
+                            } while (Character.isDefined(ch));
+                        }
+                        result.append((char) ch);
+                    } else {
+                        result.append(c);
                     }
-                    result.append((char) ch);
                 }
 
                 case UNRESTRICTED_UNICODE -> {
