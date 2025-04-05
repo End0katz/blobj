@@ -91,7 +91,10 @@ public enum Info {
                 result.append(pkg.getLast());
                 result.append(":");
 
-                result.append(cls.getPackageName().substring(cls.getPackage().getName().length()));
+                if (cls.getDeclaringClass() != null) {
+                    Class<?> decl = cls.getDeclaringClass();
+                    result.append(decl.getCanonicalName().substring(decl.getPackageName().length() + 1));
+                }
 
                 result.append(".");
                 result.append(Arrays.<String>asList(cls.getCanonicalName().split("\\.")).getLast());
@@ -156,6 +159,6 @@ public enum Info {
         if (obj == null) {
             return "null";
         }
-        return convertObjectToString(obj) + " " + classToString(obj.getClass());
+        return classToString(obj.getClass()) + " " + convertObjectToString(obj);
     }
 }
