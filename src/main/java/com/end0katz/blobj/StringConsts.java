@@ -4,6 +4,9 @@ import java.util.function.*;
 
 import com.end0katz.blobj.annotations.*;
 
+/**
+ * Class to contain constants and methods related to strings.
+ */
 @Group
 public enum StringConsts {
     ;
@@ -23,6 +26,11 @@ public enum StringConsts {
      * String containing all defined code points.
      */
     public static final String allDefinedChars = allUnicodeChars(Character::isDefined);
+
+    /**
+     * List of all ASCII characters
+     */
+    public static final String allAsciiChars = allUnicodeChars((c) -> c < 128);
 
     /**
      * Return all unicode chars matching a filter.
